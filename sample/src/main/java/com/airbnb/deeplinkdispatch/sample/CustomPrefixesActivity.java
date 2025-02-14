@@ -19,6 +19,7 @@ import com.airbnb.deeplinkdispatch.sample.library.LibraryDeepLink;
 public class CustomPrefixesActivity extends AppCompatActivity {
   private static final String TAG = CustomPrefixesActivity.class.getSimpleName();
 
+
   @Override protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.sample_activity_main);
@@ -27,6 +28,7 @@ public class CustomPrefixesActivity extends AppCompatActivity {
       Bundle parameters = getIntent().getExtras();
       Log.d(TAG, "Deeplink params: " + parameters);
 
+      //测试
       String idString = parameters.getString("id");
       if (!TextUtils.isEmpty(idString)) {
         showToast("class id== " + idString);
